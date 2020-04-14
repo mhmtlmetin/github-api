@@ -14,7 +14,7 @@ import {
 const initialState = {
   repos: [],
   user: '',
-  userinfo: {},
+  userinfo: '',
 };
 
 export default function reducer(state = initialState, action) {
