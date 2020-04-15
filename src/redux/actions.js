@@ -71,13 +71,13 @@ export function loadFollowersSuccess(user) {
     user,
   };
 }
-export function loadFollowers(user) {
+export function loadFollowers(url) {
   return function(dispatch) {
-    console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+    console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<followersurl', url);
     return axios
-      .get(`https://api.github.com/search/users?q=${Object.values(user)}`)
+      .get(url)
       .then(users => {
-        dispatch(loadUserSuccess(users.data.items));
+        dispatch(loadFollowersSuccess(users.data.items));
       })
       .catch(err => {
         throw err;
