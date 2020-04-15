@@ -58,7 +58,7 @@ const Box = styled.View`
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
-  border: 3px solid #a2a2a2;
+  border: 3px solid #0098ff;
 `;
 const Profile = styled.Image`
   margin-top: 10px;
@@ -77,7 +77,7 @@ const Label = styled.Text`
   margin-top: 15px;
 `;
 const Detay = styled.TouchableHighlight`
-  background: red;
+  background: #0098ff;
   margin-top: 15px;
   width: 150px;
   padding: 10px;
