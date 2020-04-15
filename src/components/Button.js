@@ -18,7 +18,7 @@ const Label = styled.Text`
 const ButtonContainer = styled.TouchableHighlight`
   background-color: ${props =>
     props.outline ? colors.contrast : colors.accent};
-  width: 90%;
+  width: 91%;
   margin-top: 5px;
   margin-left: 17px;
   margin-bottom: 20px;
