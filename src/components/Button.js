@@ -3,8 +3,8 @@ import {Text, TouchableHighlight} from 'react-native';
 import styled from 'styled-components/native';
 
 const colors = {
-  accent: '#911',
-  highlight: '#D22',
+  accent: '#0fcad8',
+  highlight: '#00FFED',
   contrast: '#FFF',
 };
 
