@@ -15,6 +15,7 @@ const initialState = {
   repos: [],
   user: '',
   userinfo: '',
+  followers: '',
 };
 
 export default function reducer(state = initialState, action) {
@@ -27,7 +28,7 @@ export default function reducer(state = initialState, action) {
     case LOAD_USER_INFO_SUCCESS:
       return {...state, userinfo: action.user};
     case LOAD_FOLLOWERS_SUCCESS:
-      return {...state, user: action.user};
+      return {...state, followers: action.user};
     case LOAD_FOLLOWING_SUCCESS:
       return {...state, user: action.user};
 
