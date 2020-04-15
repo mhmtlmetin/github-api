@@ -77,7 +77,7 @@ export function loadFollowers(url) {
     return axios
       .get(url)
       .then(users => {
-        dispatch(loadFollowersSuccess(users.data.items));
+        dispatch(loadFollowersSuccess(users.data));
       })
       .catch(err => {
         throw err;
