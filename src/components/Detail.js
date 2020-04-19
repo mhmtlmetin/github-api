@@ -1,15 +1,21 @@
-import React from 'react';
-import {View, Text, Image, StyleSheet, Button} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text} from 'react-native';
 import Profile from './Profile';
 import styled from 'styled-components/native';
 import Modal from './Modal';
 //redux
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {loadFollowers, loadUserInfo} from '../redux/actions';
 function Detail({navigation}) {
+  const [sendinfo, setsendinfo] = useState('');
   const userinfo = useSelector(state => state.userinfo);
 
-  console.log(userinfo);
-  const followers = login => {};
+  const dispatch = useDispatch();
+
+  const followers = url => dispatch(loadFollowers(url));
+
+  followers(userinfo.followers_url);
+
   return (
     <View>
       <Box>
@@ -18,7 +24,7 @@ function Detail({navigation}) {
         <Info onPress={() => followers(userinfo.login)}>
           takipçi: {userinfo.followers}
         </Info>
-        <Modal props={userinfo.followers_url} />
+        <Modal />
         <Info>takip: {userinfo.following}</Info>
       </Box>
       <About>
